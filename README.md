@@ -1,12 +1,36 @@
-# React + Vite
+# 💳 Redux Cash & Customers App (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Простое приложение на **React + Redux + Vite**, которое демонстрирует работу с глобальным состоянием: управление балансом, списком клиентов и автоматическое определение типа карты.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Функционал
 
-## Expanding the ESLint configuration
+- Управление балансом:
+  - ➕ Добавить деньги  
+  - ➖ Снять деньги  
+- Автоматическое определение типа карты:
+  - `Basic` — если баланс ≤ 0  
+  - `Bronze` — если баланс < 1000  
+  - `Silver` — если баланс от 1000 до 4999  
+  - `Gold` — если баланс ≥ 5000  
+- Добавление клиентов по имени.  
+- Удаление клиента кликом по его карточке.  
+- Цветовое отображение типа карты:  
+  - 🟤 Bronze — бронзовый  
+  - ⚪ Silver — серебряный  
+  - 🟡 Gold — золотой  
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Технологии
+
+- ⚡ [Vite](https://vitejs.dev/) — сборщик проекта  
+- ⚛️ [React](https://react.dev/) — UI библиотека  
+- 🔄 [Redux](https://redux.js.org/) + [React Redux](https://react-redux.js.org/) — управление состоянием  
+- 🎨 CSS  
+
+---
+
+## photos 
+<img width="1206" height="683" alt="Image" src="https://github.com/user-attachments/assets/c5596315-3087-4933-84f0-517a96a5699c" />

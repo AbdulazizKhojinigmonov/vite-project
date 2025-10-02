@@ -24,10 +24,25 @@ function App() {
     if (cash >= 1000 && cash < 5000) return 'Silver'
     if (cash >= 5000) return 'Gold' 
   }
+  const getCardColor = () => {
+    const type = getCardType()
+    switch (type) {
+      case 'Bronze': return '#CD7F32'   
+      case 'Silver': return '#D9D9D9'   
+      case 'Gold': return '#FFD700'      
+      default: return 'black'
+    }
+  }
   return (
     <>
       <h1>{cash}$</h1>
-      <h2>card type:{ getCardType()}</h2>
+      <h2>
+         Card type:{" "}
+        <span style={{ color: getCardColor(), marginLeft: 5 }}>
+        {getCardType()}
+       </span>
+       </h2>
+
       <button onClick={()=> {addCash(Number(prompt("Write number")))}} >add  </button>
       <button onClick={()=> {getCash(Number(prompt("write number")))}} >get  </button>
       <button onClick={()=>{addCustomer(prompt("Name client"))}}>Add Student</button>
@@ -35,7 +50,7 @@ function App() {
         customer.map((customer) => ( <div 
         key={customer.id}
         onClick={()=>{removeCustomer(customer.id)}}
-        style={{cursor:'pointer' , color:'black'}}
+        style={{cursor:'pointer' , color:'black', background:'lightgray', marginTop:5, padding:6, borderRadius:8}}
         >{customer.id} </div>) )
       ) :(    
       <div>no students</div>)}
